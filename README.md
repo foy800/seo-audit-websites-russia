@@ -50,13 +50,29 @@
 
 ## Установка
 
-Клонируйте репозиторий в папку скиллов Claude Code:
+Одна команда клонирует репозиторий в папку скиллов Claude Code.
+
+macOS / Linux / Git Bash:
 
 ```bash
 git clone https://github.com/foy800/seo-audit-websites-russia.git ~/.claude/skills/seo-audit
 ```
 
-Для Windows путь: `C:\Users\<имя>\.claude\skills\seo-audit`. После этого скилл подхватывается автоматически.
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/foy800/seo-audit-websites-russia.git "$env:USERPROFILE\.claude\skills\seo-audit"
+```
+
+Скилл подхватывается автоматически (если Claude Code уже запущен, перезапустите сессию). Проверка: в Claude Code напишите `/seo-audit` или «проверь сайт на SEO».
+
+Обновление до новой версии:
+
+```bash
+git -C ~/.claude/skills/seo-audit pull
+```
+
+Установка только для одного проекта: клонируйте в `<проект>/.claude/skills/seo-audit`.
 
 ## Как использовать в Claude и ChatGPT
 
